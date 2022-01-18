@@ -113,7 +113,6 @@ public class AutoClicker extends javax.swing.JFrame {
 						bot.mousePress(leftMouseButton);
 						Thread.sleep(100);
 						bot.mouseRelease(leftMouseButton);
-						System.out.print("Click" + timeToSleep);
 						Thread.sleep(timeToSleep);
 					}
 				} catch(Exception e) {
