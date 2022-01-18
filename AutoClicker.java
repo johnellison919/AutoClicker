@@ -90,12 +90,20 @@ public class AutoClicker extends javax.swing.JFrame {
 		pack();
 	}
 
+	private boolean isRunning = false;
+
 	private void startButtonActionPerformed(java.awt.event.ActionEvent evt) {
-		start();
+		if(isRunning == false) {
+			start();
+			isRunning = true;
+		}
 	}
 
 	private void stopButtonActionPerformed(java.awt.event.ActionEvent evt) {
-		stop();
+		if(isRunning == true) {
+			stop();
+			isRunning = false;
+		}
 	}
 
 	private void start() {
