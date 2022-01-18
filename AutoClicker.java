@@ -21,7 +21,7 @@ public class AutoClicker extends javax.swing.JFrame {
 		millisecondsTextField = new javax.swing.JTextField("0");
 
 		setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-		setTitle("Auto Clicker");
+		setTitle("Auto Clicker [Paused]");
 
 		startButton.setText("Start");
 		startButton.addActionListener(new java.awt.event.ActionListener() {
@@ -96,6 +96,7 @@ public class AutoClicker extends javax.swing.JFrame {
 		if(isRunning == false) {
 			start();
 			isRunning = true;
+			setTitle("Auto Clicker [Active]");
 		}
 	}
 
@@ -103,6 +104,7 @@ public class AutoClicker extends javax.swing.JFrame {
 		if(isRunning == true) {
 			stop();
 			isRunning = false;
+			setTitle("Auto Clicker [Paused]");
 		}
 	}
 
